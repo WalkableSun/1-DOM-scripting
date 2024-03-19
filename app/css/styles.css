@@ -1,141 +1,149 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    --textcolor: #eee;
-    --bgcolor: #333;
-    --bgcolor-contrast: #222;
-    --highlight: #ffc400;
-  }
+    html {
+        --textcolor: #eee;
+        --bgcolor: #333;
+        --bgcolor-contrast: #222;
+        --highlight: #ffc400;
+    }
 }
 @media (prefers-color-scheme: light) {
-  html {
-    --textcolor: #333;
-    --bgcolor: #fff;
-    --bgcolor-contrast: #ddd;
-    --highlight: #ffc400;
-  }
+    html {
+        --textcolor: #333;
+        --bgcolor: #fff;
+        --bgcolor-contrast: #ddd;
+        --highlight: #ffc400;
+    }
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.4;
-  color: var(--textcolor);
-  background: var(--bgcolor-contrast);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+    line-height: 1.4;
+    color: var(--textcolor);
+    background: var(--bgcolor-contrast);
 }
 
 html {
-  box-sizing: border-box;
-  background: var(--bgcolor-contrast);
+    box-sizing: border-box;
+    background: var(--bgcolor-contrast);
+    scroll-behavior: smooth;
+}
+
+a[href='#top'] {
+    display: block;
+    padding-bottom: 2rem;
+    color: var(--highlight);
 }
 
 .site-wrap {
-  max-width: 90vw;
-  margin: 40px auto;
-  background: white;
-  padding: 1rem;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
-  background: var(--bgcolor);
+    max-width: 90vw;
+    margin: 40px auto;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    background: var(--bgcolor);
 }
 
 header {
-  height: 180px;
-  background: url(../img/img.jpg) center no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 180px;
+    background: url(../img/img.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
-  font-family: "Lobster", cursive;
-  font-weight: normal;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
 }
 
 @media (min-width: 640px) {
-  header {
-    height: 320px;
-  }
+    header {
+        height: 320px;
+    }
 }
 
 p {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 
 h1 {
-  color: white;
-  font-size: 7vw;
-  font-weight: 400;
-  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 7vw;
+    font-weight: 400;
+    text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
 
 /* Responsive Navigation, source: 
 https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793 */
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* Hamburger button styling. "Button" is the bars icon from FontAwesome. */
 .menu-toggle {
-  color: #fff;
-  margin-right: 1rem;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 1.5rem;
-  text-shadow: 0 0 4px #000;
+    color: #fff;
+    margin-right: 1rem;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    text-shadow: 0 0 4px #000;
 }
 
 /* set the menu in a fixed position occupying 100% of the screen height, so you can't scroll away from it. Have nav scrollbars appear when needed. Any long nav names should be fully visible. */
 .main-menu {
-  position: fixed;
-  display: none;
-  left: -200px;
-  top: 0;
-  height: 100%;
-  overflow-x: visible;
-  overflow-y: auto;
-  transition: left 0.3s ease;
-  z-index: 999;
+    position: fixed;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 999;
 }
 /* turn off bullets, set width and background color of flyout menu. Width here and "left" property on main-menu should be the same absolute number */
 .main-menu ul {
-  list-style: none;
-  margin: 0;
-  padding-top: 2.5em;
-  min-height: 100%;
-  width: 200px;
-  background-color: #007eb6;
+    list-style: none;
+    margin: 0;
+    padding-top: 2.5em;
+    min-height: 100%;
+    width: 200px;
+    background-color: #007eb6;
 }
 /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. */
 .main-menu a {
-  display: block;
-  padding: 0.75rem;
-  color: var(--textcolor);
-  text-decoration: none;
+    display: block;
+    padding: 0.75rem;
+    color: var(--textcolor);
+    text-decoration: none;
 }
 
 /* "close" button is positioned in the upper right corner. Button is the X / fa-close button from FontAwesome. If you want it bigger, do it here */
 .main-menu .menu-close {
-  position: absolute;
-  right: 0;
-  top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 /*
@@ -146,19 +154,19 @@ How is it targeted? Follow the HTML: <a href="#main-menu" id="main-menu-toggle" 
 Note the href targets the main menu (both class and ID)
   */
 .main-menu:target {
-  display: block;
-  left: 0;
-  outline: none;
+    display: block;
+    left: 0;
+    outline: none;
 }
 
 /* when main menu is targeted (button is clicked), bring the X to the top so it can be clicked */
 .main-menu:target .menu-close {
-  z-index: 1001;
+    z-index: 1001;
 }
 
 .main-menu:target ul {
-  position: relative;
-  z-index: 1000;
+    position: relative;
+    z-index: 1000;
 }
 
 /* 
@@ -168,51 +176,53 @@ it wouldn't be clickable.
 The backdrop is the link on line 42, with no content and hidden. Here we display it block, make it fixed, display it behind the menu (note Z values) and give it a color. It occupies any remaining space on the screen after the menu is displayed */
 
 .main-menu:target + .backdrop {
-  position: fixed;
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  background: rgba(0, 0, 0, 0.85);
-  cursor: default;
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: default;
 }
 
 /*
    Now set desktop behavior -- MQ value is set to where the navigation starts to wrap
   */
 @media (min-width: 800px) {
-  /* fa-bars and fa-close not needed on desktop so hide them */
-  .menu-toggle,
-  .main-menu .menu-close {
-    display: none;
-  }
+    /* fa-bars and fa-close not needed on desktop so hide them */
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
 
-  .main-menu {
-    display: block;
-    position: static;
-    background: #007eb6;
-    width: 100%;
-  }
+    .main-menu {
+        display: block;
+        position: static;
+        background: #007eb6;
+        width: 100%;
+        position: sticky;
+        top: 0;
+    }
 
-  .main-menu ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-    height: auto;
-    width: auto;
-  }
+    .main-menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+    }
 
-  .main-menu li {
-    flex: 1;
-    text-align: center;
-  }
+    .main-menu li {
+        flex: 1;
+        text-align: center;
+    }
 
-  .main-menu a {
-    text-decoration: none;
-    display: inline-block;
-    color: var(--textcolor);
-  }
+    .main-menu a {
+        text-decoration: none;
+        display: inline-block;
+        color: var(--textcolor);
+    }
 }
