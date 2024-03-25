@@ -59,6 +59,15 @@ header {
     justify-content: center;
 }
 
+nav a {
+    opacity: 0.9;
+}
+
+nav .active {
+    font-weight: bold;
+    opacity: 1;
+}
+
 h1 {
     font-family: 'Lobster', cursive;
     font-weight: normal;
@@ -224,5 +233,18 @@ The backdrop is the link on line 42, with no content and hidden. Here we display
         text-decoration: none;
         display: inline-block;
         color: var(--textcolor);
+    }
+
+    .entry {
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+        grid-column-gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .entry a {
+        text-decoration: none;
+        color: var(--textcolor);
+        font-size: 1.5rem;
     }
 }
