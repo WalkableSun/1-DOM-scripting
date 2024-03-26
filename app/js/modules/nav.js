@@ -7,8 +7,8 @@ export function makeNav() {
         ${navItemsObject
             .map(
                 (item, index) =>
-                    // `<li class="navitem-${index}">${item.label}<a href="${item.link}">↑</a><a href="${item.linkD}">↓</a></li>`,
-                    `<li class="navitem-${index}"><a href="${item.link}">${item.label}</a></li>`,
+                    `<li class="navitem-${index}">${item.label}<a href="${item.link}">↑</a><a href="${item.linkD}">↓</a></li>`,
+                // `<li class="navitem-${index}"><a href="${item.link}">${item.label}</a></li>`,
             )
             .join('')}
         </ul>
