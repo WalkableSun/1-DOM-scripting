@@ -1,27 +1,34 @@
 const navItemsObject = [
     {
+        section: 'arts',
         label: 'Arts',
-        link: '#arts',
+        link: '?sort=asc#arts',
     },
     {
+        section: 'books',
         label: 'Books',
-        link: '#books',
+        link: '?sort=asc#books',
+        // linkD: '?sort=desc#books',
     },
     {
+        section: 'fashion',
         label: 'Fashion',
-        link: '#fashion',
+        link: '?sort=asc#fashion',
     },
     {
+        section: 'food',
         label: 'Food',
-        link: '#food',
+        link: '?sort=asc#food',
     },
     {
+        section: 'movies',
         label: 'Movies',
-        link: '#movies',
+        link: '?sort=asc#movies',
     },
     {
+        section: 'travel',
         label: 'Travel',
-        link: '#travel',
+        link: '?sort=asc#travel',
     },
 ];
 
